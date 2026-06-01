@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOOKOUT — Collection 2026 · See the Unseen</title>
+<meta name="description" content="LOOKOUT — streetwear premium. Casquettes, polos rayés, collection wax, édition or. See the Unseen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0c; --bg2:#111113; --card:#161618; --ink:#f4f1ea; --muted:#9c968a;
+  --gold:#c9a24b; --gold2:#e7c878; --line:rgba(255,255,255,.10);
+  --red:#d83a3a; --orange:#e87a2a; --yellow:#f0c020; --green:#1f8a4c; --blue:#2a5fd0;
+  --bar:62px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Manrope",sans-serif;
+  line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:var(--bar)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Anton",sans-serif;font-weight:400;letter-spacing:.01em;line-height:.96;text-transform:uppercase}
+.eyebrow{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(--gold2);
+  font-size:.92rem;letter-spacing:.02em}
+.wrap{max-width:1280px;margin:0 auto;padding:0 26px}
+.spectrum{height:4px;background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow),var(--green),var(--blue));
+  position:sticky;top:0;z-index:60}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.045;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* NAV */
+nav{position:sticky;top:4px;z-index:55;backdrop-filter:blur(14px);
+  background:rgba(11,11,12,.72);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:11px;font-family:"Anton",sans-serif;
+  font-size:1.45rem;letter-spacing:.04em}
+.brand .mk{width:34px;height:24px;color:var(--gold)}
+.brand b{font-weight:400}.brand b i{color:var(--gold2);font-style:normal}
+.links{display:flex;gap:30px;align-items:center}
+.links a{font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);transition:.25s;position:relative}
+.links a:hover{color:var(--ink)}
+.links a::after{content:"";position:absolute;left:0;bottom:-7px;height:2px;width:0;background:var(--gold);transition:.3s}
+.links a:hover::after{width:100%}
+.nav-r{display:flex;align-items:center;gap:14px}
+.cart-btn{display:flex;align-items:center;gap:8px;background:none;border:1px solid var(--line);
+  color:var(--ink);padding:9px 14px;border-radius:40px;cursor:pointer;font-weight:700;font-size:.8rem;transition:.25s}
+.cart-btn:hover{border-color:var(--gold);color:var(--gold2)}
+.cart-btn .cnt{background:var(--gold);color:#1a1408;border-radius:30px;min-width:20px;height:20px;
+  display:grid;place-items:center;font-size:.72rem;font-weight:800}
+.burger{display:none;background:none;border:0;color:var(--ink);cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.3s}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(11,11,12,.55)0%,rgba(11,11,12,.25)40%,rgba(11,11,12,.96)100%),
+  radial-gradient(120% 80% at 70% 10%,transparent,rgba(11,11,12,.5))}
+.hero-in{position:relative;z-index:2;padding:0 0 64px}
+.hero .eyebrow{font-size:1.05rem}
+.hero h1{font-size:clamp(3.4rem,12vw,9.5rem);margin:.12em 0 .1em;
+  text-shadow:0 4px 40px rgba(0,0,0,.5)}
+.hero h1 .o{color:var(--gold2)}
+.hero .lead{max-width:560px;color:#d8d3c8;font-size:1.06rem;margin-bottom:26px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:44px;
+  font-weight:800;font-size:.86rem;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;border:1px solid transparent;transition:.28s}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold2));color:#1a1408}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(201,162,75,.35)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:var(--ink)}
+.btn-ghost:hover{background:#fff;color:#0b0b0c;border-color:#fff}
+.hero-meta{position:absolute;right:0;bottom:64px;z-index:2;text-align:right;
+  font-size:.72rem;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+.hero-meta b{display:block;font-family:"Anton";font-size:1.5rem;color:var(--gold2);letter-spacing:.02em}
+
+/* MARQUEE */
+.marquee{background:var(--gold);color:#1a1408;overflow:hidden;white-space:nowrap;
+  border-top:1px solid #00000022;border-bottom:1px solid #00000022}
+.marquee .track{display:inline-flex;gap:0;animation:scroll 26s linear infinite;padding:11px 0}
+.marquee span{font-family:"Anton";font-size:1rem;letter-spacing:.08em;text-transform:uppercase;padding:0 26px;
+  display:inline-flex;align-items:center;gap:26px}
+.marquee span::after{content:"✦";font-size:.7rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* SECTION */
+section{position:relative;z-index:2}
+.sec{padding:96px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:42px;flex-wrap:wrap}
+.sec-head .idx{font-family:"Fraunces",serif;font-style:italic;color:var(--muted);font-size:1rem}
+.sec-head h2{font-size:clamp(2.1rem,5vw,3.6rem)}
+.sec-head p{color:var(--muted);max-width:340px;font-size:.95rem}
+
+/* COLLECTIONS */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.col{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;border:1px solid var(--line)}
+.col--big{grid-row:span 2;aspect-ratio:auto}
+.col img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.col:hover img{transform:scale(1.06)}
+.col-grad{position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(8,8,9,.9))}
+.col::before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:var(--acc);z-index:2;
+  transform:scaleX(0);transform-origin:left;transition:.4s}
+.col:hover::before{transform:scaleX(1)}
+.col-meta{position:absolute;left:20px;right:20px;bottom:18px;z-index:2}
+.col-meta h3{font-size:1.7rem;margin-top:3px}
+.col-go{display:inline-flex;gap:6px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold2);font-weight:700;margin-top:8px;opacity:0;transform:translateY(6px);transition:.35s}
+.col:hover .col-go{opacity:1;transform:none}
+
+/* PRODUCTS */
+.note{font-size:.78rem;color:var(--muted);background:var(--bg2);border:1px dashed var(--line);
+  border-radius:10px;padding:10px 14px;margin-bottom:28px;display:inline-block}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(201,162,75,.45);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.card-media{position:relative;aspect-ratio:1;overflow:hidden;background:#0e0e10}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .card-media img{transform:scale(1.05)}
+.tag{position:absolute;top:12px;left:12px;background:rgba(8,8,9,.7);backdrop-filter:blur(6px);
+  border:1px solid var(--line);color:var(--gold2);font-size:.66rem;letter-spacing:.1em;
+  text-transform:uppercase;padding:5px 10px;border-radius:30px;font-weight:700}
+.quick{position:absolute;left:12px;right:12px;bottom:12px;background:var(--ink);color:#0b0b0c;
+  border:0;border-radius:30px;padding:11px;font-weight:800;font-size:.8rem;text-transform:uppercase;
+  letter-spacing:.04em;cursor:pointer;opacity:0;transform:translateY(12px);transition:.3s}
+.card:hover .quick{opacity:1;transform:none}
+.quick:hover{background:var(--gold2)}
+.card-body{padding:15px 16px 17px}
+.card-body h3{font-family:"Manrope";font-weight:800;font-size:1.02rem;text-transform:none;letter-spacing:0;line-height:1.25}
+.card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:11px}
+.price{font-family:"Anton";font-size:1.15rem;color:var(--gold2);letter-spacing:.01em}
+.swatches{display:flex;gap:6px}
+.swatches i{width:13px;height:13px;border-radius:50%;background:var(--c);border:1px solid rgba(255,255,255,.25)}
+
+/* PREMIUM band */
+.premium{background:linear-gradient(160deg,#16130c,#0b0b0c 70%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.prem-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+.prem-txt .eyebrow{font-size:1.1rem}
+.prem-txt h2{font-size:clamp(2.4rem,5vw,4rem);margin:.1em 0 .3em}
+.prem-txt h2 span{color:var(--gold2)}
+.prem-txt p{color:var(--muted);max-width:440px;margin-bottom:26px}
+.prem-media{position:relative}
+.prem-media .a{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.prem-media .a img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.prem-media .b{position:absolute;right:-14px;bottom:-20px;width:48%;border-radius:14px;overflow:hidden;
+  border:3px solid var(--bg);box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.prem-media .b img{width:100%;aspect-ratio:1;object-fit:cover}
+.stat-row{display:flex;gap:34px;margin-top:8px}
+.stat b{font-family:"Anton";font-size:2rem;color:var(--gold2);display:block}
+.stat span{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* LOOKBOOK */
+.looks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.look{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4}
+.look img{width:100%;height:100%;object-fit:cover;transition:transform .7s,filter .5s;filter:saturate(1.05)}
+.look:hover img{transform:scale(1.05)}
+.look figcaption{position:absolute;left:14px;bottom:13px;font-family:"Anton";font-size:1.05rem;
+  letter-spacing:.04em;display:flex;align-items:center;gap:10px;text-shadow:0 2px 16px #000}
+.look figcaption span{color:var(--gold2);font-size:.8rem}
+
+/* BRAND band */
+.unseen{background:var(--bg2);border-top:1px solid var(--line)}
+.unseen-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:center}
+.unseen-art{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.unseen-art img{width:100%;display:block}
+.unseen h2{font-size:clamp(2.2rem,5vw,3.8rem);margin:.1em 0 .25em}
+.unseen h2 em{font-family:"Fraunces";font-style:italic;text-transform:none;color:var(--gold2)}
+.unseen p{color:var(--muted);max-width:460px;margin-bottom:18px}
+
+/* NEWSLETTER */
+.news{padding:84px 0;text-align:center}
+.news h2{font-size:clamp(2rem,5vw,3.2rem)}
+.news p{color:var(--muted);margin:10px auto 26px;max-width:420px}
+.news form{display:flex;gap:10px;max-width:460px;margin:0 auto}
+.news input{flex:1;background:var(--card);border:1px solid var(--line);color:var(--ink);
+  padding:15px 18px;border-radius:40px;font-family:inherit;font-size:.95rem}
+.news input:focus{outline:0;border-color:var(--gold)}
+
+/* FOOTER */
+footer{background:#070708;border-top:1px solid var(--line);padding:64px 0 110px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px}
+.foot-brand .brand{font-size:1.7rem;margin-bottom:14px}
+.foot-brand p{color:var(--muted);font-size:.9rem;max-width:280px}
+.foot-col h4{font-family:"Manrope";font-weight:800;font-size:.78rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold2);margin-bottom:16px}
+.foot-col a{display:block;color:var(--muted);font-size:.9rem;padding:5px 0;transition:.2s}
+.foot-col a:hover{color:var(--ink);padding-left:4px}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+.pays{display:flex;gap:8px}
+.pays b{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:5px 9px;font-size:.7rem;font-weight:700;letter-spacing:.06em}
+
+/* AUDIO BAR */
+.audio{position:fixed;left:0;right:0;bottom:0;z-index:70;height:var(--bar);
+  background:rgba(9,9,10,.86);backdrop-filter:blur(16px);border-top:1px solid var(--line);
+  display:flex;align-items:center;gap:16px;padding:0 18px}
+.audio .art{width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,var(--gold),#7a5e1f);
+  display:grid;place-items:center;color:#1a1408;flex:none;overflow:hidden}
+.audio .art .mk{width:26px;height:18px}
+.a-info{min-width:120px;flex:none}
+.a-info b{display:block;font-family:"Manrope";font-weight:800;font-size:.82rem;line-height:1.1}
+.a-info span{font-size:.7rem;color:var(--muted)}
+.play{width:40px;height:40px;border-radius:50%;border:0;background:var(--ink);color:#0b0b0c;
+  cursor:pointer;display:grid;place-items:center;flex:none;transition:.2s}
+.play:hover{background:var(--gold2)}
+.eq{display:flex;align-items:flex-end;gap:3px;height:22px;flex:none}
+.eq i{width:3px;background:var(--gold2);border-radius:2px;height:30%;animation:eq 1s ease-in-out infinite;animation-play-state:paused}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}
+.eq i:nth-child(4){animation-delay:.1s}.eq i:nth-child(5){animation-delay:.3s}
+.audio.playing .eq i{animation-play-state:running}
+@keyframes eq{0%,100%{height:25%}50%{height:100%}}
+.a-prog{flex:1;display:flex;align-items:center;gap:10px;min-width:80px}
+.a-prog .bar{flex:1;height:4px;background:rgba(255,255,255,.16);border-radius:3px;cursor:pointer;position:relative}
+.a-prog .fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--gold2);border-radius:3px}
+.a-time{font-size:.7rem;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
+.a-vol{width:80px;accent-color:var(--gold);flex:none}
+
+/* PLAYER NAV + PLAYLIST/ADMIN PANEL */
+.a-nav,.a-icon{background:none;border:0;color:var(--muted);cursor:pointer;flex:none;display:grid;place-items:center;padding:6px;transition:.2s}
+.a-nav:hover,.a-icon:hover{color:var(--gold2)}
+.plpanel{position:fixed;right:14px;bottom:calc(var(--bar) + 10px);width:360px;max-width:calc(100vw - 28px);max-height:62vh;
+  background:rgba(14,14,16,.97);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:14px;z-index:71;
+  display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(12px);transition:.28s;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.plpanel.open{opacity:1;visibility:visible;transform:none}
+.plp-head{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;border-bottom:1px solid var(--line)}
+.plp-head b{font-family:"Manrope";font-weight:800;letter-spacing:.04em;font-size:.92rem}
+.plp-x{background:none;border:0;color:var(--ink);font-size:1.3rem;cursor:pointer;line-height:1}
+.plp-list{overflow:auto;padding:6px;flex:1;min-height:44px}
+.plp-empty{padding:18px;text-align:center;color:var(--muted);font-size:.82rem;line-height:1.5}
+.pl-item{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;cursor:pointer;transition:.15s}
+.pl-item:hover{background:rgba(255,255,255,.05)}
+.pl-item.active{background:rgba(201,162,75,.14)}
+.pl-item .pi-ix{width:18px;text-align:center;color:var(--muted);font-size:.74rem;flex:none}
+.pl-item.active .pi-ix{color:var(--gold2)}
+.pl-item .pi-meta{flex:1;min-width:0}
+.pl-item .pi-meta b{display:block;font-size:.82rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-item .pi-meta span{font-size:.68rem;color:var(--muted)}
+.pl-item .pi-ctrl{display:none;gap:4px;flex:none}
+.editing .pl-item .pi-ctrl{display:flex}
+.pi-ctrl button{background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;width:24px;height:24px;cursor:pointer;font-size:.82rem;line-height:1;padding:0}
+.pi-ctrl button:hover{color:var(--ink);border-color:var(--gold)}
+.adm{border-top:1px solid var(--line);padding:12px 14px;background:rgba(0,0,0,.25)}
+.adm-gate{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.adm-gate span{font-size:.78rem;color:var(--muted);flex:none}
+.adm-gate input{flex:1;min-width:110px}
+.adm input,.adm textarea{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 10px;font-size:.8rem;font-family:inherit}
+.adm input:focus,.adm textarea:focus{outline:0;border-color:var(--gold)}
+.adm-row{display:flex;gap:8px;margin-bottom:8px}
+.adm-row input[type=text]{flex:1;min-width:0}
+.adm-row input[type=file]{flex:1;font-size:.72rem;color:var(--muted)}
+.btn-mini{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 12px;font-size:.74rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:.2s}
+.btn-mini:hover{border-color:var(--gold)}
+.btn-mini.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1408;border:0}
+.adm-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
+.adm-export{width:100%;height:88px;margin-top:8px;resize:vertical;font-family:monospace;font-size:.7rem}
+.adm-note{font-size:.66rem;color:var(--muted);margin-top:8px;line-height:1.45}
+@media(max-width:560px){.plpanel{right:7px;left:7px;width:auto}.a-vol,.eq{display:none}.audio{gap:8px;padding:0 10px}}
+
+/* CART DRAWER */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:80;opacity:0;visibility:hidden;transition:.3s}
+.overlay.open{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:400px;max-width:92vw;background:var(--bg2);z-index:90;
+  transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;border-left:1px solid var(--line)}
+.drawer.open{transform:none}
+.dr-head{display:flex;justify-content:space-between;align-items:center;padding:22px 22px 16px;border-bottom:1px solid var(--line)}
+.dr-head h3{font-size:1.3rem}
+.dr-close{background:none;border:0;color:var(--ink);font-size:1.4rem;cursor:pointer}
+.dr-body{flex:1;overflow:auto;padding:14px 22px}
+.dr-empty{color:var(--muted);text-align:center;padding:50px 0;font-size:.92rem}
+.li{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.li .nm{flex:1}.li .nm b{font-size:.92rem;font-weight:700}
+.li .nm small{color:var(--muted);display:block;font-size:.78rem}
+.qty{display:inline-flex;align-items:center;gap:10px;margin-top:8px;border:1px solid var(--line);border-radius:30px;padding:3px 8px}
+.qty button{background:none;border:0;color:var(--ink);cursor:pointer;font-size:1rem;width:18px}
+.li .rm{background:none;border:0;color:var(--muted);cursor:pointer;font-size:.74rem;text-decoration:underline}
+.li-price{font-family:"Anton";color:var(--gold2);font-size:1rem}
+.dr-foot{padding:18px 22px 24px;border-top:1px solid var(--line)}
+.dr-tot{display:flex;justify-content:space-between;font-weight:800;margin-bottom:14px;font-size:1.05rem}
+.dr-tot span:last-child{font-family:"Anton";color:var(--gold2);font-size:1.4rem}
+.dr-foot .btn{width:100%;justify-content:center}
+.dr-note{text-align:center;color:var(--muted);font-size:.72rem;margin-top:10px}
+
+/* TOAST */
+.toast{position:fixed;left:50%;bottom:calc(var(--bar) + 18px);transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:#0b0b0c;padding:12px 20px;border-radius:40px;font-weight:700;font-size:.85rem;
+  z-index:100;opacity:0;transition:.3s;pointer-events:none;box-shadow:0 14px 40px rgba(0,0,0,.4)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .cols,.looks{grid-template-columns:repeat(2,1fr)}
+  .col--big{grid-row:auto;aspect-ratio:3/4}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .prem-grid,.unseen-grid{grid-template-columns:1fr;gap:30px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .links{position:fixed;inset:70px 0 auto 0;flex-direction:column;background:var(--bg2);
+    padding:24px;gap:18px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.35s;z-index:54}
+  .links.open{transform:none}
+  .burger{display:block}
+  .hero-meta{display:none}
+  .a-vol,.a-info span{display:none}
+  .a-info{min-width:84px}
+  .sec{padding:64px 0}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="spectrum"></div>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><svg class="mk" viewBox="0 0 92 60" fill="currentColor" aria-hidden="true"><circle cx="20" cy="17" r="7"/><path d="M9 60 V37 q0-10 11-10 t11 10 V60 Z"/><circle cx="46" cy="11" r="8"/><path d="M32 60 V31 q0-11 14-11 t14 11 V60 Z"/><circle cx="72" cy="17" r="7"/><path d="M61 60 V37 q0-10 11-10 t11 10 V60 Z"/></svg> <span>L<b>OOK</b>OUT</span></a>
+    <div class="links" id="links">
+      <a href="#collections">Collections</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#premium">Édition Or</a>
+      <a href="#campagne">Campagne</a>
+      <a href="#histoire">Histoire</a>
+    </div>
+    <div class="nav-r">
+      <button class="cart-btn" id="openCart">Panier <span class="cnt" id="cnt">0</span></button>
+      <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img id="heroImg" src="" alt="LOOKOUT Collection 2026"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow" id="heroKicker"></p>
+    <h1>L<span class="o">OO</span>KOUT</h1>
+    <p class="lead" id="heroLead"></p>
+    <div class="cta-row">
+      <a href="#boutique" class="btn btn-gold" id="heroCtaA"></a>
+      <a href="#campagne" class="btn btn-ghost" id="heroCtaB"></a>
+    </div>
+  </div>
+  <div class="wrap hero-meta"><b id="heroMetaB"></b><span id="heroMeta"></span></div>
+</header>
+
+<div class="marquee"><div class="track" id="marquee"></div></div>
+
+<section class="sec wrap" id="collections">
+  <div class="sec-head">
+    <div><span class="idx" id="colIdx"></span><h2 id="colTitle"></h2></div>
+    <p id="colText"></p>
+  </div>
+  <div class="cols" id="cols"></div>
+</section>
+
+<section class="sec wrap" id="boutique">
+  <div class="sec-head">
+    <div><span class="idx" id="shopIdx"></span><h2 id="shopTitle"></h2></div>
+    <p id="shopText"></p>
+  </div>
+  <span class="note" id="shopNote"></span>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="sec premium" id="premium">
+  <div class="wrap prem-grid">
+    <div class="prem-txt reveal">
+      <p class="eyebrow" id="premKicker"></p>
+      <h2 id="premTitle"></h2>
+      <p id="premText"></p>
+      <a href="#boutique" class="btn btn-gold" id="premCta"></a>
+      <div class="stat-row" id="premStats" style="margin-top:30px"></div>
+    </div>
+    <div class="prem-media reveal" style="--d:120ms">
+      <div class="a"><img id="premImgA" src="" alt="Édition Or"></div>
+      <div class="b"><img id="premImgB" src="" alt="Coffret Premium"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="campagne">
+  <div class="sec-head">
+    <div><span class="idx" id="campIdx"></span><h2 id="campTitle"></h2></div>
+    <p id="campText"></p>
+  </div>
+  <div class="looks" id="looks"></div>
+</section>
+
+<section class="sec unseen" id="histoire">
+  <div class="wrap unseen-grid">
+    <div class="unseen-art reveal"><img id="manImg" src="" alt="See the Unseen"></div>
+    <div class="reveal" style="--d:120ms">
+      <p class="eyebrow" id="manKicker"></p>
+      <h2 id="manTitle"></h2>
+      <p id="manP1"></p>
+      <p id="manP2"></p>
+      <a href="#boutique" class="btn btn-ghost" id="manCta" style="margin-top:8px"></a>
+    </div>
+  </div>
+</section>
+
+<section class="news wrap">
+  <h2 id="newsTitle"></h2>
+  <p id="newsText"></p>
+  <form id="newsForm"><input type="email" id="newsInput" placeholder="ton@email.com" required><button class="btn btn-gold" type="submit" id="newsCta"></button></form>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand"><svg class="mk" viewBox="0 0 92 60" fill="currentColor" aria-hidden="true"><circle cx="20" cy="17" r="7"/><path d="M9 60 V37 q0-10 11-10 t11 10 V60 Z"/><circle cx="46" cy="11" r="8"/><path d="M32 60 V31 q0-11 14-11 t14 11 V60 Z"/><circle cx="72" cy="17" r="7"/><path d="M61 60 V37 q0-10 11-10 t11 10 V60 Z"/></svg> <span>L<b>OOK</b>OUT</span></div>
+        <p id="footBlurb"></p>
+      </div>
+      <div id="footCols" style="display:contents"></div>
+    </div>
+    <div class="foot-bottom">
+      <span id="footCopy"></span>
+      <div class="pays" id="footPays"></div>
+    </div>
+  </div>
+</footer>
+
+<!-- AUDIO BAR + PLAYLIST/ADMIN -->
+<div class="audio" id="audio">
+  <div class="art" id="aArt"><svg class="mk" viewBox="0 0 92 60" fill="currentColor" aria-hidden="true"><circle cx="20" cy="17" r="7"/><path d="M9 60 V37 q0-10 11-10 t11 10 V60 Z"/><circle cx="46" cy="11" r="8"/><path d="M32 60 V31 q0-11 14-11 t14 11 V60 Z"/><circle cx="72" cy="17" r="7"/><path d="M61 60 V37 q0-10 11-10 t11 10 V60 Z"/></svg></div>
+  <div class="a-info"><b id="aTitle">Playlist LOOKOUT</b><span id="aArtist">DraykOnThaBeatz</span></div>
+  <button class="a-nav" id="prev" aria-label="précédent"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zM20 6l-9 6 9 6z"/></svg></button>
+  <button class="play" id="play" aria-label="lecture">
+    <svg id="ic-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="ic-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+  </button>
+  <button class="a-nav" id="next" aria-label="suivant"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zM4 6l9 6-9 6z"/></svg></button>
+  <div class="eq"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="a-prog"><div class="bar" id="bar"><div class="fill" id="fill"></div></div><span class="a-time" id="time">0:00</span></div>
+  <input class="a-vol" id="vol" type="range" min="0" max="1" step="0.01" value="0.8">
+  <button class="a-icon" id="plToggle" aria-label="playlist" title="Playlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h12v2H3zM3 11h12v2H3zM3 16h8v2H3zM17 8l5 4-5 4z"/></svg></button>
+  <button class="a-icon" id="admToggle" aria-label="admin" title="Admin"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm-3 8V6a3 3 0 1 1 6 0v3z"/></svg></button>
+  <audio id="trk"></audio>
+</div>
+
+<!-- PLAYLIST / ADMIN PANEL -->
+<div class="plpanel" id="plPanel">
+  <div class="plp-head"><b>Playlist LOOKOUT</b><button class="plp-x" id="plClose" aria-label="fermer">&times;</button></div>
+  <div class="plp-list" id="plList"></div>
+  <div class="adm">
+    <div class="adm-gate" id="admGate">
+      <span>Espace admin</span>
+      <input type="password" id="admPass" placeholder="Mot de passe" autocomplete="off">
+      <button class="btn-mini" id="admUnlock">Déverrouiller</button>
+    </div>
+    <div class="adm-panel" id="admPanel" style="display:none">
+      <div class="adm-row"><input type="text" id="tTitle" placeholder="Titre du son"><input type="text" id="tArtist" placeholder="Artiste" value="DraykOnThaBeatz"></div>
+      <div class="adm-row"><input type="text" id="tUrl" placeholder="URL du MP3 (https://...)"><button class="btn-mini gold" id="addUrl">Ajouter</button></div>
+      <div class="adm-row"><input type="file" id="tFile" accept="audio/*"><button class="btn-mini" id="addFile">Importer</button></div>
+      <div class="adm-acts"><button class="btn-mini" id="exportPl">Exporter</button><button class="btn-mini" id="resetPl">Réinitialiser</button><button class="btn-mini" id="admLock">Verrouiller</button></div>
+      <textarea class="adm-export" id="exportBox" readonly style="display:none"></textarea>
+      <p class="adm-note">URL publique = joue pour tous. Import fichier = sur cet appareil. Pour diffuser : Exporter puis coller dans config.js (champ playlist). Sécurité légère (côté navigateur).</p>
+    </div>
+  </div>
+</div>
+
+<!-- CART -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="panier">
+  <div class="dr-head"><h3>Ton panier</h3><button class="dr-close" id="closeCart">&times;</button></div>
+  <div class="dr-body" id="drBody"><div class="dr-empty">Ton panier est vide.<br>Ajoute des pièces de la collection.</div></div>
+  <div class="dr-foot">
+    <div class="dr-tot"><span>Total</span><span id="total">0,00 &euro;</span></div>
+    <button class="btn btn-gold" id="checkout">Passer au paiement</button>
+    <p class="dr-note">Paiement sécurisé Shopify — branchement en cours.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="config.js"></script>
+<script>
+/* ===== CONFIG -> RENDER ===== */
+var C = window.LOOKOUT_CONFIG || {};
+var DOTS = {red:'#d83a3a',orange:'#e87a2a',yellow:'#f0c020',green:'#1f8a4c',blue:'#2a5fd0',gold:'#c9a24b',black:'#1c1c1e',white:'#f3efe6'};
+function T(id,v){var e=document.getElementById(id);if(e&&v!=null)e.textContent=v;}
+function H(id,v){var e=document.getElementById(id);if(e&&v!=null)e.innerHTML=v;}
+function SRC(id,v){var e=document.getElementById(id);if(e&&v)e.src=v;}
+function dotsHtml(cols){return (cols||[]).map(function(c){return '<i style="--c:'+(DOTS[c]||c)+'"></i>';}).join('');}
+function renderConfig(){
+  try{
+    var hero=C.hero||{};
+    SRC('heroImg',hero.image);T('heroKicker',hero.kicker);H('heroLead',hero.lead);
+    T('heroCtaA',hero.ctaPrimary);T('heroCtaB',hero.ctaSecondary);
+    T('heroMetaB',(C.brand||{}).tagline);T('heroMeta',hero.meta);
+    var mq=document.getElementById('marquee');
+    if(mq){var w=(C.marquee||[]);var two=w.concat(w);mq.innerHTML=two.map(function(x){return '<span>'+esc(x)+'</span>';}).join('');}
+    var ci=C.collectionsIntro||{};T('colIdx',ci.idx);H('colTitle',ci.title);T('colText',ci.text);
+    var cols=document.getElementById('cols');
+    if(cols){cols.innerHTML=(C.collections||[]).map(function(c,i){var big=i===0?' col--big':'';
+      return '<a href="#boutique" class="col reveal'+big+'" style="--acc:'+(c.acc||'#c9a24b')+';--d:'+((i%3)*80)+'ms"><img loading="lazy" src="'+c.image+'" alt="'+esc(c.title)+'"><div class="col-grad"></div><div class="col-meta"><span class="eyebrow">'+esc(c.sub||'')+'</span><h3>'+esc(c.title||'')+'</h3><span class="col-go">Explorer <em>&rarr;</em></span></div></a>';
+    }).join('');}
+    var si=C.shopIntro||{};T('shopIdx',si.idx);H('shopTitle',si.title);T('shopText',si.text);T('shopNote',si.note);
+    var grid=document.getElementById('grid');
+    if(grid){grid.innerHTML=(C.products||[]).map(function(p,i){
+      return '<article class="card reveal" style="--d:'+((i%4)*70)+'ms"><div class="card-media"><img loading="lazy" src="'+p.image+'" alt="'+esc(p.name)+'"><span class="tag">'+esc(p.category||'')+'</span><button class="quick" data-name="'+esc(p.name)+'" data-price="'+p.price+'">Ajouter</button></div><div class="card-body"><h3>'+esc(p.name)+'</h3><div class="card-foot"><span class="price">'+p.price+',00&nbsp;&euro;</span><span class="swatches">'+dotsHtml(p.colors)+'</span></div></div></article>';
+    }).join('');}
+    var pr=C.premium||{};T('premKicker',pr.kicker);H('premTitle',pr.title);H('premText',pr.text);T('premCta',pr.cta);
+    SRC('premImgA',pr.imageA);SRC('premImgB',pr.imageB);
+    var ps=document.getElementById('premStats');
+    if(ps){ps.innerHTML=(pr.stats||[]).map(function(s){return '<div class="stat"><b>'+esc(s.v)+'</b><span>'+esc(s.l)+'</span></div>';}).join('');}
+    var ca=C.campaignIntro||{};T('campIdx',ca.idx);H('campTitle',ca.title);T('campText',ca.text);
+    var looks=document.getElementById('looks');
+    if(looks){looks.innerHTML=(C.lookbook||[]).map(function(l,i){
+      return '<figure class="look reveal" style="--d:'+((i%3)*90)+'ms"><img loading="lazy" src="'+l.image+'" alt="'+esc(l.label)+'"><figcaption><span>0'+(i+1)+'</span>'+esc(l.label)+'</figcaption></figure>';
+    }).join('');}
+    var mn=C.manifesto||{};SRC('manImg',mn.image);T('manKicker',mn.kicker);H('manTitle',mn.title);H('manP1',mn.p1);H('manP2',mn.p2);T('manCta',mn.cta);
+    var nw=C.newsletter||{};T('newsTitle',nw.title);T('newsText',nw.text);T('newsCta',nw.cta);
+    var ni=document.getElementById('newsInput');if(ni&&nw.placeholder)ni.placeholder=nw.placeholder;
+    var ft=C.footer||{};T('footBlurb',ft.blurb);T('footCopy',ft.copyright);
+    var fc=document.getElementById('footCols');
+    if(fc){fc.innerHTML=(ft.cols||[]).map(function(col){return '<div class="foot-col"><h4>'+esc(col.h)+'</h4>'+(col.links||[]).map(function(a){return '<a href="'+(a.href||'#')+'">'+esc(a.label)+'</a>';}).join('')+'</div>';}).join('');}
+    var fp=document.getElementById('footPays');
+    if(fp){fp.innerHTML=(ft.pays||[]).map(function(x){return '<b>'+esc(x)+'</b>';}).join('');}
+  }catch(err){console.error('LOOKOUT config render error:',err);}
+}
+
+/* toast (used by cart + player) */
+var tt;function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show');},2600);}
+
+renderConfig();
+
+/* nav */
+var burger=document.getElementById('burger'),links=document.getElementById('links');
+burger.onclick=function(){links.classList.toggle('open');};
+links.querySelectorAll('a').forEach(function(a){a.onclick=function(){links.classList.remove('open');};});
+
+/* reveal (after render so dynamic .reveal are observed) */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+/* CART */
+var cart=[];
+var cnt=document.getElementById('cnt'),drBody=document.getElementById('drBody'),total=document.getElementById('total');
+var drawer=document.getElementById('drawer'),overlay=document.getElementById('overlay');
+function openCart(){drawer.classList.add('open');overlay.classList.add('open');}
+function closeCart(){drawer.classList.remove('open');overlay.classList.remove('open');}
+document.getElementById('openCart').onclick=openCart;
+document.getElementById('closeCart').onclick=closeCart;
+overlay.onclick=closeCart;
+var eur=function(n){return n.toFixed(2).replace('.',',')+' €';};
+function add(name,price){var it=cart.find(function(c){return c.name===name;});if(it)it.q++;else cart.push({name:name,price:price,q:1});renderCart();openCart();}
+function renderCart(){
+  cnt.textContent=cart.reduce(function(s,c){return s+c.q;},0);
+  if(!cart.length){drBody.innerHTML='<div class="dr-empty">Ton panier est vide.<br>Ajoute des pièces de la collection.</div>';total.textContent='0,00 €';return;}
+  drBody.innerHTML=cart.map(function(c,i){return '<div class="li"><div class="nm"><b>'+esc(c.name)+'</b><small>'+eur(c.price)+'</small><div class="qty"><button onclick="chg('+i+',-1)">\u2212</button><span>'+c.q+'</span><button onclick="chg('+i+',1)">+</button></div><button class="rm" onclick="del('+i+')">retirer</button></div><div class="li-price">'+eur(c.price*c.q)+'</div></div>';}).join('');
+  total.textContent=eur(cart.reduce(function(s,c){return s+c.price*c.q;},0));
+}
+window.chg=function(i,d){cart[i].q+=d;if(cart[i].q<1)cart.splice(i,1);renderCart();};
+window.del=function(i){cart.splice(i,1);renderCart();};
+document.addEventListener('click',function(e){var b=e.target.closest('.quick');if(b){add(b.dataset.name,+b.dataset.price);toast(b.dataset.name+' ajouté');}});
+document.getElementById('checkout').onclick=function(){toast('Paiement Shopify — branchement en cours');};
+
+/* newsletter */
+document.getElementById('newsForm').onsubmit=function(e){e.preventDefault();e.target.reset();toast('Inscription confirmée — à bientôt');};
+
+/* ===== LOOKOUT PLAYER + ADMIN ===== */
+var DEFAULT_TRACKS = (C.playlist || []);
+var ADMIN_PASS = (C.adminPass || "lookout2026");
+var LS_KEY = "lookout_playlist_v1";
+
+var audio=document.getElementById('audio'),trk=document.getElementById('trk'),play=document.getElementById('play');
+var icP=document.getElementById('ic-play'),icPa=document.getElementById('ic-pause');
+var fill=document.getElementById('fill'),bar=document.getElementById('bar'),timeEl=document.getElementById('time'),vol=document.getElementById('vol');
+var aTitle=document.getElementById('aTitle'),aArtist=document.getElementById('aArtist');
+var plPanel=document.getElementById('plPanel'),plList=document.getElementById('plList');
+var cur=0;
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function loadTracks(){try{var s=localStorage.getItem(LS_KEY);if(s){var a=JSON.parse(s);if(Array.isArray(a))return a;}}catch(e){}return DEFAULT_TRACKS.slice();}
+function saveTracks(){try{localStorage.setItem(LS_KEY,JSON.stringify(TRACKS));}catch(e){toast('Stockage plein — utilise une URL pour les gros fichiers');}}
+var TRACKS=loadTracks();
+
+var fmt=function(s){return isNaN(s)?'0:00':Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');};
+function setIcons(p){icP.style.display=p?'none':'block';icPa.style.display=p?'block':'none';}
+
+function renderList(){
+  if(!TRACKS.length){plList.innerHTML='<div class="plp-empty">Playlist vide.<br>Ouvre le cadenas (admin) pour ajouter tes MP3.</div>';return;}
+  plList.innerHTML=TRACKS.map(function(t,i){
+    return '<div class="pl-item'+(i===cur?' active':'')+'" data-i="'+i+'">'
+      +'<span class="pi-ix">'+(i===cur?'\u266A':(i+1))+'</span>'
+      +'<span class="pi-meta"><b>'+esc(t.title||('Piste '+(i+1)))+'</b><span>'+esc(t.artist||'DraykOnThaBeatz')+'</span></span>'
+      +'<span class="pi-ctrl"><button data-act="up" data-i="'+i+'">\u2191</button><button data-act="down" data-i="'+i+'">\u2193</button><button data-act="del" data-i="'+i+'">\u00d7</button></span>'
+      +'</div>';
+  }).join('');
+}
+function loadTrack(i,autoplay){
+  if(!TRACKS.length)return;
+  cur=(i+TRACKS.length)%TRACKS.length;
+  trk.src=TRACKS[cur].src;
+  aTitle.textContent=TRACKS[cur].title||('Piste '+(cur+1));
+  aArtist.textContent=TRACKS[cur].artist||'DraykOnThaBeatz';
+  renderList();
+  if(autoplay){var p=trk.play();if(p&&p.catch)p.catch(function(){});}
+}
+play.onclick=function(){
+  if(!TRACKS.length){plPanel.classList.add('open');toast('Playlist vide — ajoute tes MP3 (cadenas)');return;}
+  if(!trk.src)loadTrack(0,false);
+  if(trk.paused)trk.play();else trk.pause();
+};
+document.getElementById('prev').onclick=function(){if(TRACKS.length)loadTrack(cur-1,!trk.paused);};
+document.getElementById('next').onclick=function(){if(TRACKS.length)loadTrack(cur+1,!trk.paused);};
+trk.onplay=function(){audio.classList.add('playing');setIcons(true);};
+trk.onpause=function(){audio.classList.remove('playing');setIcons(false);};
+trk.onended=function(){loadTrack(cur+1,true);};
+trk.ontimeupdate=function(){if(trk.duration){fill.style.width=(trk.currentTime/trk.duration*100)+'%';timeEl.textContent=fmt(trk.currentTime);}};
+bar.onclick=function(e){if(trk.duration){var r=bar.getBoundingClientRect();trk.currentTime=(e.clientX-r.left)/r.width*trk.duration;}};
+vol.oninput=function(){trk.volume=+vol.value;};trk.volume=+vol.value;
+
+document.getElementById('plToggle').onclick=function(){plPanel.classList.toggle('open');};
+document.getElementById('plClose').onclick=function(){plPanel.classList.remove('open');};
+document.getElementById('admToggle').onclick=function(){plPanel.classList.add('open');document.getElementById('admPass').focus();};
+plList.onclick=function(e){
+  var b=e.target.closest('button[data-act]');
+  if(b){e.stopPropagation();var i=+b.dataset.i,act=b.dataset.act,t;
+    if(act==='del'){TRACKS.splice(i,1);if(cur>=TRACKS.length)cur=Math.max(0,TRACKS.length-1);}
+    else if(act==='up'&&i>0){t=TRACKS.splice(i,1)[0];TRACKS.splice(i-1,0,t);if(cur===i)cur=i-1;else if(cur===i-1)cur=i;}
+    else if(act==='down'&&i<TRACKS.length-1){t=TRACKS.splice(i,1)[0];TRACKS.splice(i+1,0,t);if(cur===i)cur=i+1;else if(cur===i+1)cur=i;}
+    saveTracks();renderList();return;}
+  var it=e.target.closest('.pl-item');if(it)loadTrack(+it.dataset.i,true);
+};
+
+var admPanel=document.getElementById('admPanel'),admGate=document.getElementById('admGate');
+function unlock(){admGate.style.display='none';admPanel.style.display='block';plPanel.classList.add('editing');}
+function lock(){admGate.style.display='flex';admPanel.style.display='none';plPanel.classList.remove('editing');document.getElementById('exportBox').style.display='none';}
+document.getElementById('admUnlock').onclick=function(){var i=document.getElementById('admPass');if(i.value===ADMIN_PASS){i.value='';unlock();}else toast('Mot de passe incorrect');};
+document.getElementById('admPass').onkeydown=function(e){if(e.key==='Enter')document.getElementById('admUnlock').click();};
+document.getElementById('admLock').onclick=lock;
+function addTrack(t){TRACKS.push(t);saveTracks();renderList();if(TRACKS.length===1)loadTrack(0,false);toast('Piste ajoutee');}
+document.getElementById('addUrl').onclick=function(){
+  var u=document.getElementById('tUrl').value.trim();if(!u){toast('Colle une URL de MP3');return;}
+  addTrack({title:document.getElementById('tTitle').value.trim()||'Sans titre',artist:document.getElementById('tArtist').value.trim()||'DraykOnThaBeatz',src:u});
+  document.getElementById('tTitle').value='';document.getElementById('tUrl').value='';
+};
+document.getElementById('addFile').onclick=function(){
+  var f=document.getElementById('tFile').files[0];if(!f){toast('Choisis un fichier audio');return;}
+  var r=new FileReader();r.onload=function(){
+    var nm=f.name.split('.').slice(0,-1).join('.')||f.name;
+    addTrack({title:document.getElementById('tTitle').value.trim()||nm,artist:document.getElementById('tArtist').value.trim()||'DraykOnThaBeatz',src:r.result});
+    document.getElementById('tTitle').value='';document.getElementById('tFile').value='';
+  };r.readAsDataURL(f);
+};
+document.getElementById('exportPl').onclick=function(){
+  var box=document.getElementById('exportBox');
+  box.value=JSON.stringify(TRACKS,null,2);
+  box.style.display='block';box.select();
+  try{document.execCommand('copy');toast('Playlist copiee — colle-la dans config.js (playlist)');}catch(e){toast('Selectionne le texte et copie-le');}
+};
+document.getElementById('resetPl').onclick=function(){try{localStorage.removeItem(LS_KEY);}catch(e){}TRACKS=DEFAULT_TRACKS.slice();cur=0;trk.pause();trk.removeAttribute('src');aTitle.textContent='Playlist LOOKOUT';aArtist.textContent='DraykOnThaBeatz';renderList();toast('Playlist reinitialisee');};
+
+if(TRACKS.length)loadTrack(0,false);
+renderList();
+</script>
+</body>
+</html>
