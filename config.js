@@ -3,7 +3,9 @@
    - Images : remplace un fichier dans /images (meme nom) OU change le chemin ci-dessous
               (un chemin "images/xxx.jpg", une URL https://..., ou un data:base64).
    - Textes / prix / produits / collections / lookbook : edite les valeurs.
-   - playlist : [] par defaut. Ajoute via l'admin du lecteur puis Exporter -> colle ici.
+   - playlist : tes sons. Pour qu'ils JOUENT chez les visiteurs, mets les vrais fichiers
+                dans un dossier  audio/  (meme nom que dans 'src'), puis redeploie le dossier.
+                Detail dans README.txt. Ajout rapide : admin du lecteur -> Exporter -> colle ici.
    - adminPass : le mot de passe de l'admin du lecteur (securite legere, cote navigateur).
    ==================================================================== */
 window.LOOKOUT_CONFIG = {
@@ -344,5 +346,241 @@ window.LOOKOUT_CONFIG = {
       "APPLE PAY"
     ]
   },
-  "playlist": []
+  "playlist": [
+    {
+      "title": "LOOKOUT - CIEL BLEU",
+      "artist": "LOOKOUT",
+      "src": "audio/LOOKOUT - CIEL BLEU.mp3"
+    },
+    {
+      "title": "LOOKOUT - QTVB QTVM",
+      "artist": "LOOKOUT",
+      "src": "audio/LOOKOUT - QTVB QTVM.mp3"
+    },
+    {
+      "title": "LOoKOUT - NIGHT N DAY",
+      "artist": "LOOKOUT",
+      "src": "audio/LOoKOUT - NIGHT N DAY.mp3"
+    },
+    {
+      "title": "LOOKOUT - C'EST LA MEME",
+      "artist": "LOOKOUT",
+      "src": "audio/LOOKOUT - C'EST LA MEME.mp3"
+    },
+    {
+      "title": "LOOKOUT - CIEL BLE DraykOnThaBeat",
+      "artist": "LOOKOUT",
+      "src": "audio/LOOKOUT - CIEL BLE DraykOnThaBeat.mp3"
+    },
+    {
+      "title": "LOOKOUT - CIEL BLEU other DraykOnThaBeat",
+      "artist": "LOOKOUT",
+      "src": "audio/LOOKOUT - CIEL BLEU other DraykOnThaBeat.mp3"
+    },
+    {
+      "title": "JAMA - Doucement (PREMIX)",
+      "artist": "JAMA",
+      "src": "audio/JAMA - Doucement (PREMIX).mp3"
+    },
+    {
+      "title": "JAMA - Ki Dy Sa (Ft. Mancho)-2020",
+      "artist": "JAMA",
+      "src": "audio/JAMA - Ki Dy Sa (Ft. Mancho)-2020.mp3"
+    },
+    {
+      "title": "Jama - Les Cordes ( Produced By Drayk )",
+      "artist": "JAMA",
+      "src": "audio/Jama - Les Cordes ( Produced By Drayk ).mp3"
+    },
+    {
+      "title": "jama - presse 2",
+      "artist": "JAMA",
+      "src": "audio/jama - presse 2.mp3"
+    },
+    {
+      "title": "2-jama - presse",
+      "artist": "JAMA",
+      "src": "audio/2-jama - presse.mp3"
+    },
+    {
+      "title": "EZ Wayne - Santa Maria ( Video Lyrics )",
+      "artist": "EZ Wayne",
+      "src": "audio/EZ Wayne - Santa Maria ( Video Lyrics ).mp3"
+    },
+    {
+      "title": "ez wayne 1.1",
+      "artist": "EZ Wayne",
+      "src": "audio/ez wayne 1.1.mp3"
+    },
+    {
+      "title": "lucid pre mix",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/lucid pre mix.mp3"
+    },
+    {
+      "title": "madabad",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/madabad.mp3"
+    },
+    {
+      "title": "maka kouns",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/maka kouns.mp3"
+    },
+    {
+      "title": "pa viré a zero",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/pa viré a zero.mp3"
+    },
+    {
+      "title": "pli en ka fe",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/pli en ka fe.mp3"
+    },
+    {
+      "title": "quan tou va",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/quan tou va.mp3"
+    },
+    {
+      "title": "trafiké",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/trafiké.mp3"
+    },
+    {
+      "title": "hme trp 2.1",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/hme trp 2.1.mp3"
+    },
+    {
+      "title": "inna pre mix",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/inna pre mix.mp3"
+    },
+    {
+      "title": "kanaval gabi",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/kanaval gabi.mp3"
+    },
+    {
+      "title": "la ricrié mwen",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/la ricrié mwen.mp3"
+    },
+    {
+      "title": "la ricrié mwen_ambi melo",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/la ricrié mwen_ambi melo .wav"
+    },
+    {
+      "title": "la ricrié mwen_c 2",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/la ricrié mwen_c 2.wav"
+    },
+    {
+      "title": "com dab 455666",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/com dab 455666.mp3"
+    },
+    {
+      "title": "com dab5788",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/com dab5788.mp3"
+    },
+    {
+      "title": "com dab 3",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/com dab 3.mp3"
+    },
+    {
+      "title": "COULY PUNI",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/COULY PUNI.mp3"
+    },
+    {
+      "title": "coyly - mada",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/coyly - mada.mp3"
+    },
+    {
+      "title": "di mwen",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/di mwen.mp3"
+    },
+    {
+      "title": "discret",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/discret.mp3"
+    },
+    {
+      "title": "en plaasss4",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/en plaasss4.mp3"
+    },
+    {
+      "title": "enlo interd di blok fini",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/enlo interd di blok fini.mp3"
+    },
+    {
+      "title": "enlo interd di blok",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/enlo interd di blok.mp3"
+    },
+    {
+      "title": "extension an gro an deta",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/extension an gro an deta.mp3"
+    },
+    {
+      "title": "al bien 2.0",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/al bien 2.0.mp3"
+    },
+    {
+      "title": "AUD-20180723-WA0003",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/AUD-20180723-WA0003.mp3"
+    },
+    {
+      "title": "ayin pa dou pre mix",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/ayin pa dou pre mix.mp3"
+    },
+    {
+      "title": "ayin pa dou",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/ayin pa dou.mp3"
+    },
+    {
+      "title": "fre mwen",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/fre mwen.mp3"
+    },
+    {
+      "title": "freejam",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/freejam.mp3"
+    },
+    {
+      "title": "get link 456",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/get link 456.mp3"
+    },
+    {
+      "title": "get link Master DraykOnThaBeat",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/get link Master DraykOnThaBeat.mp3"
+    },
+    {
+      "title": "get link",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/get link.mp3"
+    },
+    {
+      "title": "LETTRE A LA FORTUNE",
+      "artist": "DraykOnThaBeatz",
+      "src": "audio/LETTRE A LA FORTUNE.mp3"
+    }
+  ]
 };
