@@ -9,7 +9,7 @@
    - adminPass : le mot de passe de l'admin du lecteur (securite legere, cote navigateur).
    ==================================================================== */
 window.LOOKOUT_CONFIG = {
-  "adminPass": "lookout2026",
+  "adminPass": "Lookout2026.",
   "brand": {
     "name": "LOOKOUT",
     "tagline": "See the Unseen"
@@ -353,9 +353,9 @@ window.LOOKOUT_CONFIG = {
       "src": "audio/LOOKOUT - CIEL BLEU.mp3"
     },
     {
-      "title": "LOOKOUT - QTVB QTVM",
+      "title": "Disappear Riddim",
       "artist": "LOOKOUT",
-      "src": "audio/LOOKOUT - QTVB QTVM.mp3"
+      "src": "Disappear Riddim.mp3"
     },
     {
       "title": "LOoKOUT - NIGHT N DAY",
