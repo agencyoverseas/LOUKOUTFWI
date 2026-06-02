@@ -425,7 +425,7 @@ window.LOOKOUT_CONFIG = {
     {
       "title": "maka kouns",
       "artist": "DraykOnThaBeatz",
-      "src": "audio/maka kouns.mp3"
+      "src": "https://bcnwnjmvaneeiinyhrkp.supabase.co/storage/v1/object/public/audio/maka%20kouns.mp3"
     },
     {
       "title": "pa viré a zero",
@@ -490,7 +490,7 @@ window.LOOKOUT_CONFIG = {
     {
       "title": "com dab 3",
       "artist": "DraykOnThaBeatz",
-      "src": "audio/com dab 3.mp3"
+      "src": "https://bcnwnjmvaneeiinyhrkp.supabase.co/storage/v1/object/public/audio/com%20dab%203.mp3"
     },
     {
       "title": "COULY PUNI",
